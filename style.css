@@ -16,6 +16,7 @@ body {
     flex-direction: column;
     color: whitesmoke;
     background-color: #212529;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 .container {
@@ -34,8 +35,8 @@ body {
 }
 
 #cell1, #cell2, #cell3, #cell4, #cell5, #cell6, #cell7, #cell8, #cell9 {
-    height: 250px;
-    width: 250px;
+    height: 255px;
+    width: 255px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -84,16 +85,16 @@ body {
 
 .painel {
     display: grid;
-    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-columns: repeat(3, 1fr) ;
     grid-template-rows: repeat(1, 1fr);
     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
-    background-color:#3cc368 ;
+    
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
 .part1 {
     height: 100px;
-    width: auto/2;
+    width: auto/3;
     background-color: #1d2935;
     display: flex;
     justify-content: center;
@@ -101,12 +102,12 @@ body {
     flex-direction: column;
     font-weight: 900;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-    font-size: 2vw;
+    font-size: 20px;
 }
 
 .part2 {
     height: 100px;
-    width:auto/2;
+    width:auto/3;
     background-color: #1d2935;
     display: flex;
     justify-content: space-around;
@@ -114,10 +115,19 @@ body {
     flex-direction: row;
 }
 
+.part3 {
+    height: 100px;
+    width:auto/3;
+    background-color: #1d2935;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
 #playAgain {
-    height: 5vh;
-    font-size: 1.4vw;
-    width: 10vw;
+    height: 60px;
+    font-size: 20px;
+    width: 120px;
     color: whitesmoke;
     text-decoration: none;
     cursor: pointer;
@@ -144,8 +154,8 @@ body {
         gap: 10px 10px;
     }
     #cell1, #cell2, #cell3, #cell4, #cell5, #cell6, #cell7, #cell8, #cell9 {
-        height: 150px;
-        width: 150px; 
+        height: 190px;
+        width: 190px; 
     }
     .⨯ {
         font-size: 190px;
@@ -161,13 +171,16 @@ body {
         font-size: 20px;
         width: 100px;
     }
+    #result {
+        font-size: 30px;
+    }
 }
 
 @media only screen and (max-width: 540px) {
     
     #cell1, #cell2, #cell3, #cell4, #cell5, #cell6, #cell7, #cell8, #cell9 {
-        height: 100px;
-        width: 100px; 
+        height: 105px;
+        width: 105px; 
     }
     .⨯ {
         font-size: 130px;
@@ -176,12 +189,12 @@ body {
         font-size: 82px;
     }
     #result {
-        font-size: 21px;
-        display: none;
+        font-size: 15px;
+        
        
     }
     #playAgain {
-        height: 60px;
+        height: 40px;
         font-size: 13px;
         width: 60px;
     }

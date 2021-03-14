@@ -4,6 +4,7 @@ let yourScore = document.getElementById("yourScore")
 let computerScore = document.getElementById("computerScore")
 let result = document.getElementById("result")
 let avoidBug = true
+let tie = document.getElementById("tie")
 
 let playAgain = document.getElementById("playAgain")
 playAgain.addEventListener('click', ()=> {reset()})
@@ -273,6 +274,19 @@ function checkWinner(){
                     return true
                 }
             }
+    }
+    let cellsWithChildren = 0;
+    for(let i = 0; i < cells.length; i++){
+        if(cells[i].childElementCount > 0){
+            cellsWithChildren = cellsWithChildren + 1
+        }
+        if(cellsWithChildren === 9){
+            result.style.color = "white"
+            result.innerHTML = "YOU TIED!"
+            switchPlayers = 'STOP'
+            tie.innerHTML = Number(tie.innerHTML) + 1
+            return true
+        }
     }
    
     }
