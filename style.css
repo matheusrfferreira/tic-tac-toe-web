@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+    background-color: #212529;
+}
+
+.container {
+    background-color: #1d2935;
+    box-shadow: inset 0 0 3em #3cc368, 0 0 1em #3cc368;
+    margin-top: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+    grid-template-rows: repeat(3, 1fr);
+    gap: 25px 25px;
+    background-color:#3cc368 ;
+    
+}
+
+#cell1, #cell2, #cell3, #cell4, #cell5, #cell6, #cell7, #cell8, #cell9 {
+    height: 250px;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #1d2935;
+    box-shadow:         inset 0 0 10px #000000;
+}
+
+.⨯ {
+    font-size: 250px;
+    font-weight: 600;
+    cursor: default;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+               margin-bottom: 15px;
+}
+
+.〇 {
+    font-size: 200px;
+    font-weight: 600;
+    cursor: default;
+    text-shadow: 0 1px 0 #ccc,
+               0 2px 0 #c9c9c9,
+               0 3px 0 #bbb,
+               0 4px 0 #b9b9b9,
+               0 5px 0 #aaa,
+               0 6px 1px rgba(0,0,0,.1),
+               0 0 5px rgba(0,0,0,.1),
+               0 1px 3px rgba(0,0,0,.3),
+               0 3px 5px rgba(0,0,0,.2),
+               0 5px 10px rgba(0,0,0,.25),
+               0 10px 10px rgba(0,0,0,.2),
+               0 20px 20px rgba(0,0,0,.15);
+    margin-bottom: 15px;
+}
+
+.painel {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+    grid-template-rows: repeat(1, 1fr);
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    background-color:#3cc368 ;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.part1 {
+    height: 100px;
+    width: auto/2;
+    background-color: #1d2935;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: 900;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    font-size: 2vw;
+}
+
+.part2 {
+    height: 100px;
+    width:auto/2;
+    background-color: #1d2935;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+#playAgain {
+    height: 5vh;
+    font-size: 1.4vw;
+    width: 10vw;
+    color: whitesmoke;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: transparent;
+    appearance: none;
+    border: solid 3px #3cc368;
+    transition: box-shadow 300ms ease-in-out, color 300ms ease-in-out;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    font-weight: 900;
+    
+}
+#playAgain:hover {
+    box-shadow: 0 0 40px 40px #3cc368 inset;
+}
+
+#result {
+    font-size: 2vw;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+    font-weight: 900;
+}
+
+@media only screen and (max-width: 1024px) {
+    .grid {
+        gap: 10px 10px;
+    }
+    #cell1, #cell2, #cell3, #cell4, #cell5, #cell6, #cell7, #cell8, #cell9 {
+        height: 150px;
+        width: 150px; 
+    }
+    .⨯ {
+        font-size: 190px;
+    }
+    .〇 {
+        font-size: 122px;
+    }
+    .part1 {
+        font-size: 20px;
+    }
+    #playAgain {
+        height: 50px;
+        font-size: 20px;
+        width: 100px;
+    }
+}
+
+@media only screen and (max-width: 540px) {
+    
+    #cell1, #cell2, #cell3, #cell4, #cell5, #cell6, #cell7, #cell8, #cell9 {
+        height: 100px;
+        width: 100px; 
+    }
+    .⨯ {
+        font-size: 130px;
+    }
+    .〇 {
+        font-size: 82px;
+    }
+    #result {
+        font-size: 21px;
+        display: none;
+       
+    }
+    #playAgain {
+        height: 60px;
+        font-size: 13px;
+        width: 60px;
+    }
+    .part1 {
+        font-size: 15px;
+    }
+}
